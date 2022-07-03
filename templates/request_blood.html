@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h3><i style="font-weight: bold;  ">Request For Blood</i></h3>
+    <form method="POST"> {% csrf_token %}
+
+
+        <div class="form-control">
+            <label >
+                Name:
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="name"
+                   name="name"
+                   placeholder="Enter your name" />
+        </div>
+  
+        <div class="form-control">
+            <label  >
+                Email:
+            </label>
+ 
+            <!-- Input Type Email-->
+            <input type="email"
+                   id="email"
+                   name="email"
+                   placeholder="Enter your email" />
+        </div>
+  
+        <div class="form-control">
+            <label >
+                Phone:
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="tel"
+                   id="phone"
+                   name="phone"
+                   placeholder="Enter your phonenumber" />
+        </div>
+
+        <div class="form-control">
+            <label >
+                pincode:
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="pincode"
+                   name="pincode"
+                   placeholder="Enter your Pincode" />
+        </div>
+
+        <div class="form-control">
+            <label >
+                BloodGroup:
+            </label>
+              
+            <!-- Dropdown options -->
+            <select name="blood_group" >
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="A-">A-</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label >
+                RequireDate:
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="datetime-local"
+                   id="date"
+                   name="date"
+                   placeholder="Enter your date" />
+        </div>
+
+
+
+  
+        
+        <br>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+{% endblock %}
